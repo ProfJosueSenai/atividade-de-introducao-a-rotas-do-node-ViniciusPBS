@@ -24,6 +24,10 @@ const server = http.createServer((req, res) => {
         res.writeHead(200,'ok',{ 'Content-Type': 'text/html; charset=utf-8' }) 
         res.end('<ul><li>água</li><li>suco de laranja</li><li>refrigerante</li></ul>');
     }
+    else if(url === '/Carnes'){ //nova rota acrescentada
+        res.writeHead(200,'ok',{ 'Content-Type': 'text/html; charset=utf-8' }) 
+        res.end('<ul><li>Frango</li><li>Carne Bovina</li><li>Peixe</li></ul>');
+    }
     else {
        res.writeHead(404,'Pagina não encontrada',{ 'Content-Type': 'text/html; charset=utf-8' }) //rota nao cadastrada
        res.end('Pagina não encontrada');
